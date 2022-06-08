@@ -3,7 +3,7 @@ package com.example.p1_ap2_alvaro_20190269.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Prestamo")
+@Entity(tableName = "Prestamos")
 data class Prestamo(
     @PrimaryKey(autoGenerate = true)
     val pestamoId: Int = 0,

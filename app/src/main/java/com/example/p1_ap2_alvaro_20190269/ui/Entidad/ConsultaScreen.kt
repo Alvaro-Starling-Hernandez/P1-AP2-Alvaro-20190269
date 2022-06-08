@@ -38,6 +38,7 @@ fun ConsultaScreen(navHostController: NavHostController) {
         Column(
             modifier = Modifier
                 .padding(it)
+
         ) {
 
         }

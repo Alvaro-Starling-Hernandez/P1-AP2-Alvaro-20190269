@@ -16,20 +16,35 @@ fun RowPrestamo(
     prestamo: Prestamo,
     navHostController: NavHostController
 ) {
-    Row(
-        horizontalArrangement = Arrangement.SpaceBetween,
+    Column(
         modifier = Modifier
             .fillMaxWidth()
-            .height(25.dp)
             .clickable {
                 navHostController.navigate(Screens.RegistroScreen.route)
             }
     ) {
-        Text(prestamo.deudor)
-        Text(
-            text = prestamo.monto.toString(),
-            style = MaterialTheme.typography.caption,
-            modifier = Modifier.padding(start = 16.dp)
-        )
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(25.dp)
+        ) {
+            Text(prestamo.deudor)
+            Text(prestamo.monto.toString())
+        }
+
+
+        Row(
+            horizontalArrangement = Arrangement.Start,
+            modifier = Modifier
+                .fillMaxWidth()
+        ) {
+            Text(
+                text = prestamo.concepto,
+                style = MaterialTheme.typography.caption,
+            )
+        }
+
     }
+
 }

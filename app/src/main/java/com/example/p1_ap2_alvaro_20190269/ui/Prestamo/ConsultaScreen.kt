@@ -54,6 +54,7 @@ fun ConsultaScreen(
             LazyColumn(modifier = Modifier.fillMaxWidth()) {
                 items(listaPrestamos.value){prestamo ->
                     RowPrestamo(prestamo = prestamo, navHostController = navHostController)
+                    Spacer(modifier = Modifier.height(5.dp))
                     Divider(
                         color = Color.Black,
                         modifier = Modifier

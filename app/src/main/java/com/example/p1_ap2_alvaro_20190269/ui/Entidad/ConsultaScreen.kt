@@ -9,9 +9,11 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import com.example.p1_ap2_alvaro_20190269.utils.Screens
 
 @Composable
-fun ConsultaScreen() {
+fun ConsultaScreen(navHostController: NavHostController) {
     Scaffold(
 
         topBar = {
@@ -24,7 +26,7 @@ fun ConsultaScreen() {
         floatingActionButton = {
 
             FloatingActionButton(
-                onClick = { }
+                onClick = { navHostController.navigate(Screens.RegistroScreen.route)}
             ) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = null)
             }

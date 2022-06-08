@@ -13,9 +13,10 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 
 @Composable
-fun RegistroScreen() {
+fun RegistroScreen(navHostController: NavHostController) {
     Scaffold(
 
         topBar = {
@@ -28,7 +29,7 @@ fun RegistroScreen() {
                         imageVector = Icons.Default.ArrowBack,
                         contentDescription = "ArrowBack",
                         modifier = Modifier.clickable {
-
+                            navHostController.popBackStack()
                         }
                     )
                 }

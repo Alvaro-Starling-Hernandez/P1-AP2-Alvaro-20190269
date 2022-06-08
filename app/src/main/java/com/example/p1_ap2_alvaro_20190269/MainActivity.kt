@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.p1_ap2_alvaro_20190269.ui.Consulta.ConsultaScreen
 import com.example.p1_ap2_alvaro_20190269.ui.theme.P1AP2Alvaro20190269Theme
 
 class MainActivity : ComponentActivity() {
@@ -22,14 +23,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    ConsultaScreen()
                 }
             }
         }
     }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
 }
